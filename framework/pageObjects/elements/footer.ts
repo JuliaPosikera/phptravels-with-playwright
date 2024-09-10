@@ -1,6 +1,6 @@
 import { Page, Locator } from "@playwright/test";
 
-export class PageFooter {
+export class Footer {
   //   /**
   //    * @param {import('@playwright/test').Page} page
   //    */
@@ -23,7 +23,6 @@ export class PageFooter {
   signUpEmailInput: Locator;
   signUpButton: Locator;
   rightsText: Locator;
-  //   socialMediaLocators: { [key: string]: Locator };
   socialMediaLocators: Locator[];
 
   constructor(page: Page) {
@@ -66,8 +65,8 @@ export class PageFooter {
   }
 
   // Static async factory method to create an instance
-  static async create(page: Page): Promise<PageFooter> {
-    const footer = new PageFooter(page);
+  static async create(page: Page): Promise<Footer> {
+    const footer = new Footer(page);
     await footer.init();
     return footer;
   }
